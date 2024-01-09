@@ -27,18 +27,27 @@ Note that some reactions could be impossible.
 
 ## Assignment
 
-Fill in the template at
-<https://MasseyRustTraining/heatflow-template> such that the
-given tests pass. Add a few more tests.
+Do as much of this as feels comfortable.
 
-## Bonus Assignment
+1. Fill in the template at
+   <https://MasseyRustTraining/heatflow-template> such that the
+   given tests pass. Add a few more tests.
+   
+   (The solution given here is just for this part.)
 
-Assume that the energy cost of the system is sum, over each
-`Unit`, of the square of the difference of that `Unit` from
-the `nominal` temperature. Adjust `find_setpoint()` to
-return a minimum energy cost setpoint.
+2. Assume that the energy cost of the system is sum, over
+   each `Unit`, of the square of the difference of that
+   `Unit` from the `nominal` temperature. Adjust
+   `find_setpoint()` to return a minimum energy cost
+   setpoint.
 
-You can do this by trying all possible setpoints as long as
-there aren't hugely many. If there are, the problem becomes
-much more challenging, requiring a least-squares
-minimization.
+   You can do this by trying all possible setpoints as long
+   as there aren't hugely many. If there are, the problem
+   becomes much more challenging, requiring a least-squares
+   minimization.
+
+3. Make your solution more adaptable by replacing the `enum
+   Unit` with a `Unit` trait and `Heater` and `Cooler`
+   structs. Make the `System` store trait objects. Add a
+   `HeaterCooler` struct that has a `nominal` setpoint
+   somewhere between its `min` and `max`.
