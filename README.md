@@ -33,7 +33,7 @@ Do as much of this as feels comfortable.
    <https://MasseyRustTraining/heatflow-template> such that the
    given tests pass. Add a few more tests.
    
-   (The solution given here is just for this part.)
+   (See `soln-1` for solution.)
 
 2. Assume that the energy cost of the system is sum, over
    each `Unit`, of the square of the difference of that
@@ -45,9 +45,13 @@ Do as much of this as feels comfortable.
    as there aren't hugely many. If there are, the problem
    becomes much more challenging, requiring a least-squares
    minimization.
+   
+   (See `soln-2` for solution.)
 
 3. Make your solution more adaptable by replacing the `enum
    Unit` with a `Unit` trait and `Heater` and `Cooler`
-   structs. Make the `System` store trait objects. Add a
-   `HeaterCooler` struct that has a `nominal` setpoint
-   somewhere between its `min` and `max`.
+   structs. Make the `System` store `Box`ed trait
+   objects. Add a `HeaterCooler` struct that has a `nominal`
+   setpoint somewhere between its `min` and `max`.
+
+   (See `soln-3` for solution.)
